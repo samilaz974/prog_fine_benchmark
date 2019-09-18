@@ -12,6 +12,8 @@ object App {
   def main(args : Array[String]) {
     println( "Benchmarking" )
     OperatorBenchmark.additionBenchmark()
+    OperatorBenchmark.multiplicationBenchmark()
+    OperatorBenchmark.compareOperatorBenchmark()
   }
 
 }
