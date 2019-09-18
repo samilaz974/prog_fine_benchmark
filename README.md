@@ -1,1 +1,0 @@
-# prog_fine_benchmark
