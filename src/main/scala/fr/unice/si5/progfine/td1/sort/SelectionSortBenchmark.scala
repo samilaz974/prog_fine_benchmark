@@ -1,8 +1,8 @@
 package fr.unice.si5.progfine.td1.sort
 
-object SelectionSortBenchmark {
+object SelectionSortBenchmark { //Complexity O(n²)
 
-  private val nbLoop:Int = 100000
+  private val nbLoop:Int = 10000000
 
   def sortBenchmark(): Unit ={
 
