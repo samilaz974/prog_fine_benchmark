@@ -2,7 +2,7 @@ package fr.unice.si5.progfine.td1
 
 object OperatorBenchmark {
 
-  val nbLoop:Int = 1000000000
+  private val nbLoop:Int = 1000000000
 
   def additionBenchmark(): Unit ={
     var beginning:Long = 0
