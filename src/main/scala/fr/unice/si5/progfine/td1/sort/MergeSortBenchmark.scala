@@ -1,7 +1,5 @@
 package fr.unice.si5.progfine.td1.sort
 
-import fr.unice.si5.progfine.td1.sort.SelectionSortBenchmark.{nbLoop, selectionSort}
-
 object MergeSortBenchmark {  //Complexity O(nlog(n))
 
   private val nbLoop:Int = 10000000
@@ -22,7 +20,7 @@ object MergeSortBenchmark {  //Complexity O(nlog(n))
     println("Total sorting time")
     println(end-beginning)
 
-    println("Average time per selection sort (ms)")
+    println("Average time per merge sort (ms)")
     println((end-beginning).toFloat/nbLoop)
   }
 
