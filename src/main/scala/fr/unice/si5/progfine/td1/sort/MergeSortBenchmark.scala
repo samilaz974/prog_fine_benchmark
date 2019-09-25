@@ -13,7 +13,7 @@ object MergeSortBenchmark {  //Complexity O(nlog(n))
 
     beginning = System.currentTimeMillis()
     for(i <- 0 to (nbLoop-1)){
-      mergeSort(arrays(i), 0, arrays(i).length-1)
+      mergeSort(arrays(i))
     }
     end = System.currentTimeMillis()
 
@@ -21,14 +21,18 @@ object MergeSortBenchmark {  //Complexity O(nlog(n))
     println((end-beginning).toFloat/nbLoop)
   }
 
-  def mergeSort(input: Array[Int], l:Int, r:Int): Array[Int] = {
+  def mergeSort(array: Array[Int]): Unit ={
+    sort(array, 0, array.length-1)
+  }
+
+  def sort(input: Array[Int], l:Int, r:Int): Array[Int] = {
     if(l<r){
       //Find the middle point
       var m = (l+r)/2
 
       //Sort first and second halves
-      mergeSort(input, l, m)
-      mergeSort(input, m+1, r)
+      sort(input, l, m)
+      sort(input, m+1, r)
 
       //Merge the sorted halves
       merge(input, l, m, r)
