@@ -6,7 +6,7 @@ object QuickSortBenchmark { //Complexity O(nlog(n))
 
   def sortBenchmark(): Unit ={
 
-    var arrays:Array[Array[Int]] = ArrayInitializer.initialize(nbLoop)
+    //var arrays:Array[Array[Int]] = ArrayInitializer.initialize(nbLoop)
 
     var beginning:Long = 0
     var end:Long = 0

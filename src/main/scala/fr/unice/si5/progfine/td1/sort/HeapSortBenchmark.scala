@@ -8,14 +8,14 @@ object HeapSortBenchmark { //Complexity 0(nlog(n))
 
   def sortBenchmark(): Unit ={
 
-    var arrays:Array[Array[Int]] = ArrayInitializer.initialize(nbLoop)
+    //var arrays:Array[Array[Int]] = ArrayInitializer.initialize(nbLoop)
 
     var beginning:Long = 0
     var end:Long = 0
 
     beginning = System.currentTimeMillis()
     for(i <- 0 to (nbLoop-1)){
-      heapSort(arrays(i))
+      //heapSort(arrays(i))
     }
     end = System.currentTimeMillis()
 

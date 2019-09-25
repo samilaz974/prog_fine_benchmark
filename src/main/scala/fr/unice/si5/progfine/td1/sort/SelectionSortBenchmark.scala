@@ -4,22 +4,6 @@ object SelectionSortBenchmark { //Complexity O(n²)
 
   private val nbLoop:Int = 10000000
 
-  def sortBenchmark(): Unit ={
-
-    var arrays:Array[Array[Int]] = ArrayInitializer.initialize(nbLoop)
-
-    var beginning:Long = 0
-    var end:Long = 0
-
-    beginning = System.currentTimeMillis()
-    for(i <- 0 to (nbLoop-1)){
-      selectionSort(arrays(i))
-    }
-    end = System.currentTimeMillis()
-
-    println("Average time per selection sort (ms)")
-    println((end-beginning).toFloat/nbLoop)
-  }
 
   def selectionSort(input: Array[Int]): Array[Int] = {
     val inputSize: Int = input.length
