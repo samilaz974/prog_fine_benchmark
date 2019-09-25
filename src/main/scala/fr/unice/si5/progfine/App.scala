@@ -1,7 +1,10 @@
 package fr.unice.si5.progfine
 
-import fr.unice.si5.progfine.td1.OperatorBenchmark
+import java.io.File
+
+import com.github.tototoshi.csv.CSVWriter
 import fr.unice.si5.progfine.td1.sort.{ArrayInitializer, HeapSortBenchmark, InsertionSortBenchmark, MergeSortBenchmark, QuickSortBenchmark, SelectionSortBenchmark}
+
 
 /**
  * @author ${user.name}
@@ -27,12 +30,14 @@ object App {
   }
 
   def benchmarkTest(funcName:String, func: (Array[Int]) => Array[Int]) = {
+    val f = new File(funcName+".csv")
 
+    val writer = CSVWriter.open(f)
     // verify that all arrays are not sorted
     //assert(!arrays.forall(x => sorted(x)))
     val powerLimit:Int = 10
 
-    for (power <- 0 to powerLimit){
+    for (power <- 1 to powerLimit){
       var arrays:Array[Array[Int]] = ArrayInitializer.buildArray(power, 1000, 1000)
 
       val startTime = System.currentTimeMillis()
@@ -43,13 +48,11 @@ object App {
 
       val stopTime = System.currentTimeMillis()
 
+      writer.writeRow(List(power, startTime, stopTime ))
+      println(s"Sorting function: $funcName Runtime: ${stopTime - startTime}ms")
 
     }
-
-
-
-    println(s"Sorting function: $funcName Runtime: ${stopTime - startTime}ms Standard Deviation: $stanDev Sorted: $isSorted")
-
+    writer.close()
   }
 
 
@@ -124,17 +127,17 @@ object App {
 
   // MERGESORT
   def mergeSort(array: Array[Int]): Array[Int] ={
-    return sort(array, 0, array.length-1)
+    return sort_merge(array, 0, array.length-1)
   }
 
-  def sort(input: Array[Int], l:Int, r:Int): Array[Int] = {
+  def sort_merge(input: Array[Int], l:Int, r:Int): Array[Int] = {
     if(l<r){
       //Find the middle point
       var m = (l+r)/2
 
       //Sort first and second halves
-      sort(input, l, m)
-      sort(input, m+1, r)
+      sort_merge(input, l, m)
+      sort_merge(input, m+1, r)
 
       //Merge the sorted halves
       merge(input, l, m, r)
@@ -200,15 +203,15 @@ object App {
 
   //QUICKSORT
   def quickSort(array: Array[Int]): Array[Int] ={
-    return sort(array, 0, array.length-1)
+    return sort_quick(array, 0, array.length-1)
   }
 
-  def sort(array: Array[Int], low : Int, high : Int): Array[Int] = {
+  def sort_quick(array: Array[Int], low : Int, high : Int): Array[Int] = {
     if(low < high){
       var pi = partition(array, low, high)
 
-      sort(array, low, pi-1)
-      sort(array, pi+1, high)
+      sort_quick(array, low, pi-1)
+      sort_quick(array, pi+1, high)
     }
     return array
   }

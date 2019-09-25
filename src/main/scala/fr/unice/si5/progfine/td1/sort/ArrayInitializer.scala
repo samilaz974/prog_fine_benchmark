@@ -39,15 +39,15 @@ object ArrayInitializer {
     val random = scala.util.Random
     var arrays :Array[Array[Int]] = Array.ofDim(arrayCount)
 
-      println("power= "+power)
+      //println("power= "+power)
       var arraySize = math.pow(2,power).asInstanceOf[Int]
 
-      for (i <- 1 to arrayCount){
+      for (i <- 0 until arrayCount){
         var newArray = Array.ofDim[Int](arraySize)
         for(j <- 0 until arraySize){newArray(j)=random.nextInt(maxValue)}
-        println("i= " + i)
-        println(newArray.deep.mkString("\n"))
-        arrays(power*i) = newArray
+        //println("i= " + i)
+        //println(newArray.deep.mkString("\n"))
+        arrays(i) = newArray
       }
 
     return arrays

@@ -55,6 +55,14 @@
       <version>${spec2.version}</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.github.tototoshi/scala-csv -->
+    <dependency>
+      <groupId>com.github.tototoshi</groupId>
+      <artifactId>scala-csv_2.10</artifactId>
+      <version>0.7.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>
