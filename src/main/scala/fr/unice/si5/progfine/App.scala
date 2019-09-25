@@ -1,7 +1,8 @@
 package fr.unice.si5.progfine
 
 import fr.unice.si5.progfine.td1.OperatorBenchmark
-import fr.unice.si5.progfine.td1.sort.{CountingSortBenchmark, HeapSortBenchmark, MergeSortBenchmark, NativeSortBenchmark, SelectionSortBenchmark}
+import fr.unice.si5.progfine.td1.sort.InsertionSortBenchmark.nbLoop
+import fr.unice.si5.progfine.td1.sort.{ArrayInitializer, HeapSortBenchmark, InsertionSortBenchmark, MergeSortBenchmark, SelectionSortBenchmark}
 
 /**
  * @author ${user.name}
@@ -13,11 +14,14 @@ object App {
     //OperatorBenchmark.additionBenchmark()
     //OperatorBenchmark.multiplicationBenchmark()
     //OperatorBenchmark.compareOperatorBenchmark()
-    SelectionSortBenchmark.sortBenchmark()
-    MergeSortBenchmark.sortBenchmark()
-    HeapSortBenchmark.sortBenchmark()
-    CountingSortBenchmark.sortBenchmark()
-    NativeSortBenchmark.sortBenchmark()
+    //MergeSortBenchmark.sortBenchmark()
+    //HeapSortBenchmark.sortBenchmark()
+    //SelectionSortBenchmark.sortBenchmark()
+    //InsertionSortBenchmark.sortBenchmark()
+    var arrays:Array[Array[Int]] = ArrayInitializer.initializePowerArrays(4, 2, 10)
+
+
+
   }
 
 }
