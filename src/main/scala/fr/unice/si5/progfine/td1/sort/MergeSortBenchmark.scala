@@ -17,9 +17,6 @@ object MergeSortBenchmark {  //Complexity O(nlog(n))
     }
     end = System.currentTimeMillis()
 
-    println("Total sorting time")
-    println(end-beginning)
-
     println("Average time per merge sort (ms)")
     println((end-beginning).toFloat/nbLoop)
   }

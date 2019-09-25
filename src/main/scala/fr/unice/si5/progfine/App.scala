@@ -1,7 +1,7 @@
 package fr.unice.si5.progfine
 
 import fr.unice.si5.progfine.td1.OperatorBenchmark
-import fr.unice.si5.progfine.td1.sort.{HeapSortBenchmark, MergeSortBenchmark, SelectionSortBenchmark}
+import fr.unice.si5.progfine.td1.sort.{CountingSortBenchmark, HeapSortBenchmark, MergeSortBenchmark, SelectionSortBenchmark}
 
 /**
  * @author ${user.name}
@@ -16,6 +16,7 @@ object App {
     SelectionSortBenchmark.sortBenchmark()
     MergeSortBenchmark.sortBenchmark()
     HeapSortBenchmark.sortBenchmark()
+    CountingSortBenchmark.sortBenchmark()
   }
 
 }

@@ -19,9 +19,6 @@ object HeapSortBenchmark { //Complexity 0(nlog(n))
     }
     end = System.currentTimeMillis()
 
-    println("Total sorting time")
-    println(end-beginning)
-
     println("Average time per heap sort (ms)")
     println((end-beginning).toFloat/nbLoop)
   }

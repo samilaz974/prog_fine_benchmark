@@ -17,9 +17,6 @@ object SelectionSortBenchmark { //Complexity O(n²)
     }
     end = System.currentTimeMillis()
 
-    println("Total sorting time")
-    println(end-beginning)
-
     println("Average time per selection sort (ms)")
     println((end-beginning).toFloat/nbLoop)
   }
