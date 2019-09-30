@@ -23,13 +23,14 @@ object App {
     val f7 = HeapSortBenchmark.heapSort _
 
     // TODO: check the implementation of the Selection sort because the time outputed and time taken compared to the other algorithms is huge
-    benchmarkTest("SelectionSort", f1)
+
     benchmarkTest("InsertionSort", f2)
-    //benchmarkTest("QuickSort", f3)
+    benchmarkTest("QuickSort", f3)
     benchmarkTest("MergeSort", f4)
     benchmarkTest("CountingSort", f5)
     benchmarkTest("NativeSort", f6)
     benchmarkTest("HeapSort", f7)
+    benchmarkTest("SelectionSort", f1)
 
 
   }
@@ -42,9 +43,8 @@ object App {
     //Write the column names
     writer.writeRow(List("power", "start_time", "stop_time"))
 
-    // verify that all arrays are not sorted
-    //assert(!arrays.forall(x => sorted(x)))
-    val powerLimit: Int = 10
+
+    val powerLimit: Int = 18
 
     for (power <- 1 to powerLimit) {
       var arrays: Array[Array[Int]] = ArrayInitializer.buildArray(power, 10000, 1000)

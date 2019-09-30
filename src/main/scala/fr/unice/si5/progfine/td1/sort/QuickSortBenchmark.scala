@@ -15,10 +15,7 @@ object QuickSortBenchmark { //Complexity O(nlog(n))
       sort(array, pi+1, high)
     }
 
-    //TODO: what is writen just below is for the function to return an Array[Int]
-    // TODO: Make this function return the sorted array or the funciton above it called quickSort
-    val a = new Array[Int](10)
-    return a
+    return array
   }
 
   def partition(array: Array[Int], low : Int, high : Int): Int = {
