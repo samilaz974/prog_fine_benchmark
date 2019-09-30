@@ -2,11 +2,8 @@ package fr.unice.si5.progfine.td1.sort
 
 object MergeSortBenchmark {  //Complexity O(nlog(n))
 
-  private val nbLoop:Int = 10000000
-
-
-  def mergeSort(array: Array[Int]): Unit ={
-    sort(array, 0, array.length-1)
+  def mergeSort(array: Array[Int]): Array[Int] ={
+    return sort(array, 0, array.length-1)
   }
 
   def sort(input: Array[Int], l:Int, r:Int): Array[Int] = {

@@ -2,9 +2,6 @@ package fr.unice.si5.progfine.td1.sort
 
 object SelectionSortBenchmark { //Complexity O(n²)
 
-  private val nbLoop:Int = 10000000
-
-
   def selectionSort(input: Array[Int]): Array[Int] = {
     val inputSize: Int = input.length
 

@@ -2,20 +2,23 @@ package fr.unice.si5.progfine.td1.sort
 
 object QuickSortBenchmark { //Complexity O(nlog(n))
 
-  private val nbLoop:Int = 10000000
 
-
-  def quickSort(array: Array[Int]): Unit ={
-    sort(array, 0, array.length-1)
+  def quickSort(array: Array[Int]): Array[Int] ={
+    return sort(array, 0, array.length-1)
   }
 
-  def sort(array: Array[Int], low : Int, high : Int): Unit = {
+  def sort(array: Array[Int], low : Int, high : Int): Array[Int] = {
     if(low < high){
       var pi = partition(array, low, high)
 
       sort(array, low, pi-1)
       sort(array, pi+1, high)
     }
+
+    //TODO: what is writen just below is for the function to return an Array[Int]
+    // TODO: Make this function return the sorted array or the funciton above it called quickSort
+    val a = new Array[Int](10)
+    return a
   }
 
   def partition(array: Array[Int], low : Int, high : Int): Int = {
