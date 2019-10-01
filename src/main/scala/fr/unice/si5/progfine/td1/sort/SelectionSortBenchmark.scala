@@ -2,24 +2,30 @@ package fr.unice.si5.progfine.td1.sort
 
 object SelectionSortBenchmark { //Complexity O(n²)
 
+  //From http://thescalatutorial.blogspot.com/2013/07/selection-sort-code-in-scala.html
   def selectionSort(input: Array[Int]): Array[Int] = {
-    val inputSize: Int = input.length
 
-    for (currentMin <- 0 to (inputSize-1)){
-      var min_index = currentMin
-
-      //Find the lowest in the following of the array
-      for(currentItem <- 0 to (inputSize-1)){
-        if(input(currentItem) < input(min_index)){
-          min_index = currentItem
+    def findMin(array: Array[Int], start: Int): Int = {
+      var minIndex = start
+      for (i <- start until array.size) {
+        if (array(i) < array(minIndex)) {
+          minIndex = i
         }
+      }
+      minIndex
+    }
 
-        //Swap values
-        val temp = input(min_index)
-        input(min_index) = input(currentMin)
-        input(currentMin) = temp
+    def bubbleSortRecursive(array: Array[Int], start: Int): Array[Int] = {
+      val minIndex = findMin(array, start)
+      start match {
+        case _ if (start >= array.size - 1) => array
+        case _ =>
+          var temp = array(start)
+          array(start) = array(minIndex)
+          array(minIndex) = temp
+          bubbleSortRecursive(array, start + 1)
       }
     }
-    return input
+    bubbleSortRecursive(input, 0)
   }
 }
