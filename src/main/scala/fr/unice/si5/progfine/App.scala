@@ -28,12 +28,13 @@ object App {
 
     // INFORMATION IMPORTANTE, a puissance 16, outof memory error: Java heap space
 
-    benchmarkTest("InsertionSort", f2)
+
     benchmarkTest("QuickSort", f3)
     benchmarkTest("MergeSort", f4)
     benchmarkTest("CountingSort", f5)
     benchmarkTest("NativeSort", f6)
     benchmarkTest("HeapSort", f7)
+    benchmarkTest("InsertionSort", f2)
     benchmarkTest("SelectionSort", f1)
 
 
@@ -41,6 +42,13 @@ object App {
   }
 
   def benchmarkTest(funcName: String, func: (Array[Int]) => Array[Int]) = {
+    //WARMUP
+    var arrays: Array[Array[Int]] = ArrayInitializer.buildArray(5, 100, 1000)
+    for (i <- 0 until arrays.length) {
+      func(arrays(i))
+    }
+    //WARMUP END
+
     val f = new File(funcName + ".csv")
 
     val writer = CSVWriter.open(f)
@@ -49,7 +57,7 @@ object App {
     writer.writeRow(List("power", "start_time", "stop_time"))
 
 
-    val powerLimit: Int = 20
+    val powerLimit: Int = 16
 
     for (power <- 1 to powerLimit) {
       var arrays: Array[Array[Int]] = ArrayInitializer.buildArray(power, 1000, 1000)
