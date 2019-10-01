@@ -27,13 +27,14 @@ object App {
 
 
     // INFORMATION IMPORTANTE, a puissance 16, outof memory error: Java heap space
+    benchmarkTest("SelectionSort", f1)
     benchmarkTest("InsertionSort", f2)
     benchmarkTest("QuickSort", f3)
     benchmarkTest("MergeSort", f4)
     benchmarkTest("CountingSort", f5)
     benchmarkTest("NativeSort", f6)
     benchmarkTest("HeapSort", f7)
-     benchmarkTest("SelectionSort", f1)
+
 
 
   }
