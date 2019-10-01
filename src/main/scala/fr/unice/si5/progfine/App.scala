@@ -24,13 +24,16 @@ object App {
 
     // TODO: check the implementation of the Selection sort because the time outputed and time taken compared to the other algorithms is huge
 
+
+
+    // INFORMATION IMPORTANTE, a puissance 16, outof memory error: Java heap space
     benchmarkTest("InsertionSort", f2)
     benchmarkTest("QuickSort", f3)
     benchmarkTest("MergeSort", f4)
     benchmarkTest("CountingSort", f5)
     benchmarkTest("NativeSort", f6)
     benchmarkTest("HeapSort", f7)
-    benchmarkTest("SelectionSort", f1)
+     benchmarkTest("SelectionSort", f1)
 
 
   }
@@ -44,10 +47,10 @@ object App {
     writer.writeRow(List("power", "start_time", "stop_time"))
 
 
-    val powerLimit: Int = 18
+    val powerLimit: Int = 15
 
     for (power <- 1 to powerLimit) {
-      var arrays: Array[Array[Int]] = ArrayInitializer.buildArray(power, 10000, 1000)
+      var arrays: Array[Array[Int]] = ArrayInitializer.buildArray(power, 1000, 1000)
       val startTime = System.currentTimeMillis()
 
       for (i <- 0 until arrays.length) {
