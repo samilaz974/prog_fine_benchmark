@@ -1,8 +1,9 @@
-package fr.unice.si5.progfine.td1.sort
+package fr.unice.si5.progfine.sort
 
-object QuickSortBenchmark { //Complexity O(nlog(n))
+object QuickSortBenchmark {
 
 
+  //Complexity O(nlog(n))
   def quickSort(array: Array[Int]): Array[Int] ={
     return sort(array, 0, array.length-1)
   }

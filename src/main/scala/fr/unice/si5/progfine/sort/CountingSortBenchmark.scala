@@ -1,9 +1,9 @@
-package fr.unice.si5.progfine.td1.sort
+package fr.unice.si5.progfine.sort
 
-object CountingSortBenchmark {  // Complexity O(n+k)  n is the number of items in the array and k is the number of keys (maxValue - minValue of the array)
+object CountingSortBenchmark {
 
 
-
+  // Complexity O(n+k)  n is the number of items in the array and k is the number of keys (maxValue - minValue of the array)
   // From https://github.com/mypetyak/scala-algorithms/blob/master/sort/countingsort.scala
   def countingSort(a: Array[Int]): Array[Int] = {
     var min = 0

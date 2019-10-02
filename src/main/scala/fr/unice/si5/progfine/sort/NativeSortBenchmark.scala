@@ -1,4 +1,4 @@
-package fr.unice.si5.progfine.td1.sort
+package fr.unice.si5.progfine.sort
 
 object NativeSortBenchmark {
 

@@ -1,7 +1,8 @@
-package fr.unice.si5.progfine.td1.sort
+package fr.unice.si5.progfine.sort
 
-object SelectionSortBenchmark { //Complexity O(n²)
+object SelectionSortBenchmark {
 
+  //Complexity O(n²)
   //From http://thescalatutorial.blogspot.com/2013/07/selection-sort-code-in-scala.html
   def selectionSort(input: Array[Int]): Array[Int] = {
 

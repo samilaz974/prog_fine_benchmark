@@ -1,8 +1,9 @@
-package fr.unice.si5.progfine.td1.sort
+package fr.unice.si5.progfine.sort
 
 
-object HeapSortBenchmark { //Complexity 0(nlog(n))
+object HeapSortBenchmark {
 
+  //Complexity 0(nlog(n))
   def heapSort(input: Array[Int]): Array[Int] = {
     val n = input.length
 

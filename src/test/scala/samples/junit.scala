@@ -2,8 +2,7 @@ package samples
 
 import org.junit._
 import Assert._
-import fr.unice.si5.progfine.App.benchmarkTest
-import fr.unice.si5.progfine.td1.sort.{ArrayInitializer, CountingSortBenchmark, HeapSortBenchmark, InsertionSortBenchmark, MergeSortBenchmark, NativeSortBenchmark, QuickSortBenchmark, SelectionSortBenchmark}
+import fr.unice.si5.progfine.sort.{ArrayInitializer, CountingSortBenchmark, HeapSortBenchmark, InsertionSortBenchmark, MergeSortBenchmark, NativeSortBenchmark, QuickSortBenchmark, SelectionSortBenchmark}
 
 @Test
 class AppTest {
@@ -45,9 +44,7 @@ class AppTest {
         assert(!arrays.forall(x => sorted(x)))
 
         for (i <- 0 until arrays.length) {
-            //println(arrays(i).mkString(" "))
             val sorted_array = func(arrays(i))
-            //println(sorted_array.mkString(" "))
             assert(sorted(sorted_array))
         }
 

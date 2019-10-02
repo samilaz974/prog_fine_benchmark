@@ -1,4 +1,4 @@
-package fr.unice.si5.progfine.td1
+package fr.unice.si5.progfine
 
 object OperatorBenchmark {
 

@@ -1,7 +1,8 @@
-package fr.unice.si5.progfine.td1.sort
+package fr.unice.si5.progfine.sort
 
-object InsertionSortBenchmark { //Complexity O(n^2)
+object InsertionSortBenchmark {
 
+  //Complexity O(n^2)
   def insertionSort(array: Array[Int]): Array[Int] = {
 
     for(i <- 0 until array.length){

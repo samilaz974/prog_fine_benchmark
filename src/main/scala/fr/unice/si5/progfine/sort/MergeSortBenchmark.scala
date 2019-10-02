@@ -1,7 +1,8 @@
-package fr.unice.si5.progfine.td1.sort
+package fr.unice.si5.progfine.sort
 
-object MergeSortBenchmark {  //Complexity O(nlog(n))
+object MergeSortBenchmark {
 
+  //Complexity O(nlog(n))
   def mergeSort(array: Array[Int]): Array[Int] ={
     return sort(array, 0, array.length-1)
   }

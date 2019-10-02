@@ -3,7 +3,7 @@ package fr.unice.si5.progfine
 import java.io.File
 
 import com.github.tototoshi.csv.CSVWriter
-import fr.unice.si5.progfine.td1.sort.{ArrayInitializer, CountingSortBenchmark, HeapSortBenchmark, InsertionSortBenchmark, MergeSortBenchmark, NativeSortBenchmark, QuickSortBenchmark, SelectionSortBenchmark}
+import fr.unice.si5.progfine.sort.{ArrayInitializer, CountingSortBenchmark, HeapSortBenchmark, InsertionSortBenchmark, MergeSortBenchmark, NativeSortBenchmark, QuickSortBenchmark, SelectionSortBenchmark}
 
 
 /**
@@ -22,25 +22,23 @@ object App {
     val f6 = NativeSortBenchmark.native_sort _
     val f7 = HeapSortBenchmark.heapSort _
 
-    // TODO: check the implementation of the Selection sort because the time outputed and time taken compared to the other algorithms is huge
-
-
-
-    // INFORMATION IMPORTANTE, a puissance 16, outof memory error: Java heap space
-
-
-    //benchmarkTest("QuickSort", f3)
-    //benchmarkTest("MergeSort", f4)
-    //benchmarkTest("CountingSort", f5)
-    //benchmarkTest("NativeSort", f6)
-    //benchmarkTest("HeapSort", f7)
-    //benchmarkTest("InsertionSort", f2)
+    benchmarkTest("QuickSort", f3)
+    benchmarkTest("MergeSort", f4)
+    benchmarkTest("CountingSort", f5)
+    benchmarkTest("NativeSort", f6)
+    benchmarkTest("HeapSort", f7)
+    benchmarkTest("InsertionSort", f2)
     benchmarkTest("SelectionSort", f1)
 
 
 
   }
 
+  /**
+   *
+   * @param funcName Name of the sort algorithm
+   * @param func Actual sort algorithm function
+   */
   def benchmarkTest(funcName: String, func: (Array[Int]) => Array[Int]) = {
     //WARMUP
     var arrays: Array[Array[Int]] = ArrayInitializer.buildArray(5, 100, 1000)
@@ -56,7 +54,7 @@ object App {
     //Write the column names
     writer.writeRow(List("power", "start_time", "stop_time"))
 
-
+    // INFORMATION IMPORTANTE, a puissance 18, outof memory error: Java heap space
     val powerLimit: Int = 17
 
     for (power <- 1 to powerLimit) {
