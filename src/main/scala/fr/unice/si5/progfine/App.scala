@@ -47,30 +47,28 @@ object App {
     }
     //WARMUP END
 
+    // Open csv
     val f = new File(funcName + ".csv")
-
     val writer = CSVWriter.open(f)
 
-    //Write the column names
+    // Write the column names
     writer.writeRow(List("power", "start_time", "stop_time"))
 
-    // INFORMATION IMPORTANTE, a puissance 18, outof memory error: Java heap space
+    // IMPORTANT: outof memory error: Java heap space at power = 18
     val powerLimit: Int = 17
 
     for (power <- 1 to powerLimit) {
       var arrays: Array[Array[Int]] = ArrayInitializer.buildArray(power, 1000, 1000)
+
       val startTime = System.currentTimeMillis()
-
-      for (i <- 0 until arrays.length) {
-        func(arrays(i))
-      }
-
+      for (i <- 0 until arrays.length) {func(arrays(i))}
       val stopTime = System.currentTimeMillis()
 
       writer.writeRow(List(power, startTime, stopTime))
       println(s"Sorting function: $funcName Runtime: ${stopTime - startTime}ms")
 
     }
+
     writer.close()
   }
 
