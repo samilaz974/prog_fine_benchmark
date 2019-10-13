@@ -10,7 +10,11 @@ import com.github.tototoshi.csv.CSVWriter
 object App {
 
   def main(args: Array[String]) {
-    HashMapBenchmark.benchmarkImmutable(100000000)
-    HashMapBenchmark.benchmarkMutable(100000000)
+    val nbLoop = 10000000
+    //HashMapBenchmark.benchmarkImmutable(nbLoop)
+    //HashMapBenchmark.benchmarkMutable(nbLoop)
+
+    QueueBenchmark.immutableBenchmark(nbLoop)
+    QueueBenchmark.mutableBenchmark(nbLoop)
   }
 }
