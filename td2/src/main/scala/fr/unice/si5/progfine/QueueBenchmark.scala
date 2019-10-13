@@ -81,7 +81,7 @@ object QueueBenchmark {
     }
 
     val stopTimeDequeue = System.currentTimeMillis()
-    writer_enqueue.writeRow(List(power, startTimeEnqueue, stopTimeEnqueue, stopTimeEnqueue - startTimeEnqueue))
+    writer_dequeue.writeRow(List(power, startTimeEnqueue, stopTimeEnqueue, stopTimeEnqueue - startTimeEnqueue))
 
     assert(immutableQueue.length == 0)
   }
