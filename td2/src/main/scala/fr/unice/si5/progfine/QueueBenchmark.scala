@@ -12,6 +12,14 @@ object QueueBenchmark {
 
     val stopTimeEnqueue = System.currentTimeMillis()
     println("Enqueue mutable Queue runtime" + (stopTimeEnqueue - startTimeEnqueue) + " ms")
+
+    val startTimeDequeue = System.currentTimeMillis()
+    for (i <- 0 until nbLoop) {
+      mutableQueue.enqueue(i.toString())
+    }
+
+    val stopTimeDequeue = System.currentTimeMillis()
+    println("Dequeue mutable Queue runtime" + (stopTimeDequeue - startTimeDequeue) + " ms")
   }
 
   def immutableBenchmark(nbLoop : Int): Unit ={
@@ -24,6 +32,15 @@ object QueueBenchmark {
 
     val stopTimeEnqueue = System.currentTimeMillis()
     println("Enqueue immutable Queue runtime" + (stopTimeEnqueue - startTimeEnqueue) + " ms")
+
+
+    val startTimeDequeue = System.currentTimeMillis()
+    for (i <- 0 until nbLoop) {
+      immutableQueue.enqueue(i.toString())
+    }
+
+    val stopTimeDequeue = System.currentTimeMillis()
+    println("Dequeue im mutable Queue runtime" + (stopTimeDequeue - startTimeDequeue) + " ms")
   }
   
 }
