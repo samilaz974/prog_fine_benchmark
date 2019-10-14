@@ -22,10 +22,22 @@ class ImmutableHeap {
 
   // Function to return the position of the
   // left child for the node currently at pos
-  private def leftChild(pos: Int) = 2 * pos
+  private def leftChild(pos: Int): Int = {
+    if(2*pos > size){
+      return 0
+    }else{
+      return 2*pos
+    }
+  }
 
   // the right child for the node currently
-  private def rightChild(pos: Int) = (2 * pos) + 1
+  private def rightChild(pos: Int): Int = {
+    if(2*pos+1 > size){
+      return 0
+    }else{
+      return 2*pos+1
+    }
+  }
 
   // Function that returns true if the passed
   // node is a leaf node
@@ -117,5 +129,9 @@ class ImmutableHeap {
     })
     minHeapify(FRONT)
     popped
+  }
+
+  def length() : Int = {
+    return this.size
   }
 }

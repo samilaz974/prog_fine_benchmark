@@ -22,10 +22,22 @@ class MutableHeap {
 
   // Function to return the position of the
   // left child for the node currently at pos
-  private def leftChild(pos: Int) = 2 * pos
+  private def leftChild(pos: Int): Int = {
+    if(2*pos > size){
+      return 0
+    }else{
+      return 2*pos
+    }
+  }
 
   // the right child for the node currently
-  private def rightChild(pos: Int) = (2 * pos) + 1
+  private def rightChild(pos: Int): Int = {
+    if(2*pos+1 > size){
+      return 0
+    }else{
+      return 2*pos+1
+    }
+  }
 
   // Function that returns true if the passed
   // node is a leaf node
@@ -45,7 +57,9 @@ class MutableHeap {
   // Function to heapify the node at pos
   private def minHeapify(pos: Int): Unit = { // If the node is a non-leaf node and greater
     // than any of its child
-    if (!isLeaf(pos)) if (Heap(pos) > Heap(leftChild(pos)) || Heap(pos) > Heap(rightChild(pos))) { // Swap with the left child and heapify
+    if (!isLeaf(pos))
+      if (Heap(pos) > Heap(leftChild(pos))
+        || Heap(pos) > Heap(rightChild(pos))) { // Swap with the left child and heapify
       // the left child
       if (Heap(leftChild(pos)) < Heap(rightChild(pos))) {
         swap(pos, leftChild(pos))
@@ -105,13 +119,16 @@ class MutableHeap {
   }
 
   // Function to remove and return the minimum
-  // element from the heap
+  // element ONTom the heap
   def remove: Int = {
     val popped = Heap(FRONT)
-    Heap(FRONT) = Heap({
-      size -= 1; size + 1
-    })
+    Heap(FRONT) = Heap(size)
+    size = size -1
     minHeapify(FRONT)
     popped
+  }
+
+  def length() : Int = {
+    return this.size
   }
 }
