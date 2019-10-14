@@ -16,5 +16,11 @@ object App {
 
     StackBenchmark.ImmutableBenchmark(powerLimit)
     StackBenchmark.MutableBenchmark(powerLimit)
+
+    HeapBenchmark.MutableBenchmark(powerLimit)
+    //HeapBenchmark.ImmutableBenchmark(powerLimit) jusqu'a 19, resultats enregistrés
+
+    TreeSetBenchmark.ImmutableBenchmark(powerLimit)
+    //TreeSetBenchmark.MutableBenchmark(powerLimit) jusqu'a 17, resultats enregistrés
   }
 }
