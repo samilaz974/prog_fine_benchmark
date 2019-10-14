@@ -8,7 +8,7 @@ object App {
   def main(args: Array[String]) {
     val powerLimit = 24
 
-    HashMapBenchmark.ImmutableBenchmark(powerLimit)
+    /*HashMapBenchmark.ImmutableBenchmark(powerLimit)
     HashMapBenchmark.MutableBenchmark(powerLimit)
 
     QueueBenchmark.ImmutableBenchmark(powerLimit)
@@ -21,6 +21,9 @@ object App {
     //HeapBenchmark.ImmutableBenchmark(powerLimit) jusqu'a 19, resultats enregistrés
 
     TreeSetBenchmark.ImmutableBenchmark(powerLimit)
-    //TreeSetBenchmark.MutableBenchmark(powerLimit) jusqu'a 17, resultats enregistrés
+    //TreeSetBenchmark.MutableBenchmark(powerLimit) jusqu'a 17, resultats enregistrés*/
+
+    ArrayBenchmark.MutableBenchmark(powerLimit)
+    ArrayBenchmark.ImmutableBenchmark(powerLimit)
   }
 }
