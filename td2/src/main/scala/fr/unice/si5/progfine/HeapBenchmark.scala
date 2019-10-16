@@ -8,10 +8,10 @@ import fr.unice.si5.progfine.datastructures.mutable.MutableHeap
 
 object HeapBenchmark {
   def MutableBenchmark(powerLimit: Int): Unit = {
-    val f_mutable_insert = new File("mutable-heap-insert.csv")
+    val f_mutable_insert = new File("mutable-heap-add.csv")
     val writer_insert = CSVWriter.open(f_mutable_insert)
 
-    val f_mutable_remove = new File("mutable-heap-remove.csv")
+    val f_mutable_remove = new File("mutable-heap-pop.csv")
     val writer_remove = CSVWriter.open(f_mutable_remove)
 
     writer_insert.writeRow(List("size", "start_time", "stop_time", "total_time"))
@@ -24,10 +24,10 @@ object HeapBenchmark {
   }
 
   def ImmutableBenchmark(powerLimit: Int): Unit = {
-    val f_immutable_insert = new File("immutable-heap-insert.csv")
+    val f_immutable_insert = new File("immutable-heap-add.csv")
     val writer_insert = CSVWriter.open(f_immutable_insert)
 
-    val f_immutable_remove = new File("immutable-heap-remove.csv")
+    val f_immutable_remove = new File("immutable-heap-pop.csv")
     val writer_remove = CSVWriter.open(f_immutable_remove)
 
     writer_insert.writeRow(List("size", "start_time", "stop_time", "total_time"))

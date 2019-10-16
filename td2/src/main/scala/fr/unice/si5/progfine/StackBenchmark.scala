@@ -7,7 +7,7 @@ import com.github.tototoshi.csv.CSVWriter
 object StackBenchmark {
 
   def MutableBenchmark(powerLimit: Int): Unit = {
-    val f_mutable_push = new File("mutable-stack-push.csv")
+    val f_mutable_push = new File("mutable-stack-append.csv")
     val writer_push = CSVWriter.open(f_mutable_push)
 
     val f_mutable_pop = new File("mutable-stack-pop.csv")
@@ -23,7 +23,7 @@ object StackBenchmark {
   }
 
   def ImmutableBenchmark(powerLimit: Int): Unit = {
-    val f_immutable_push = new File("immutable-stack-push.csv")
+    val f_immutable_push = new File("immutable-stack-append.csv")
     val writer_push = CSVWriter.open(f_immutable_push)
 
     val f_immutable_pop = new File("immutable-stack-pop.csv")
