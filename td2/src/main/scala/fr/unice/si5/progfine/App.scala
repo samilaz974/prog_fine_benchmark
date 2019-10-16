@@ -24,6 +24,6 @@ object App {
     //TreeSetBenchmark.MutableBenchmark(powerLimit) jusqu'a 17, resultats enregistrés
 
     ArrayBenchmark.MutableBenchmark(powerLimit)
-    ArrayBenchmark.ImmutableBenchmark(powerLimit)
+    //ArrayBenchmark.ImmutableBenchmark(powerLimit)
   }
 }
