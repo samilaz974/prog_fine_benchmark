@@ -72,13 +72,11 @@ This scenario is also written for the immutable stack, and these scenarios are r
 ## Visualisation in Python - jupyter
 Here we are using python 3.7.3
 
-In the `visualisation/data` package, we put our .csv files.
+In the `visualisation/data` package, we have the .csv files storing the benchmark results.
 
 In the `visualisation/` package, we have 2 notebooks:
 
-[analysis_no_warmup.ipynb](https://github.com/samilazrak/prog_fine_benchmark/blob/master/visualisation/analysis_no_warmup.ipynb) using the `no_warmup` data.<br>
-[analysis_warmed_up.ipynb.ipynb](https://github.com/samilazrak/prog_fine_benchmark/blob/master/visualisation/analysis_no_warmup.ipynb) using the `warmed_up` data.
-
+[analysis.ipynb](https://github.com/samilazrak/prog_fine_benchmark/blob/master/td2/visualisation/analysis.ipynb) <br>
 
 ## Authors
 
