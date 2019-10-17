@@ -1,10 +1,10 @@
-package fr.unice.si5.progfine
+package fr.unice.si5.progfine.datastructures
 
 import java.io.File
 
 import com.github.tototoshi.csv.CSVWriter
 
-object QueueBenchmark {
+object RedBlackTreeBenchmark {
 
   def MutableBenchmark(powerLimit: Int): Unit = {
     val f_mutable_enqueue = new File("mutable-queue-enqueue.csv")
