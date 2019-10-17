@@ -31,8 +31,8 @@ In the `visualisation/data` package, we put our .csv files.
 
 In the `visualisation/` package, we have 2 notebooks:
 
-[analysis_no_warmup.ipynb](https://github.com/samilazrak/prog_fine_benchmark/blob/master/visualisation/analysis_no_warmup.ipynb) using the `no_warmup` data.<br>
-[analysis_warmed_up.ipynb.ipynb](https://github.com/samilazrak/prog_fine_benchmark/blob/master/visualisation/analysis_no_warmup.ipynb) using the `warmed_up` data.
+[analysis_no_warmup.ipynb](https://github.com/samilazrak/prog_fine_benchmark/blob/master/td1/visualisation/analysis_no_warmup.ipynb) using the `no_warmup` data.<br>
+[analysis_warmed_up.ipynb.ipynb](https://github.com/samilazrak/prog_fine_benchmark/blob/master/td1/visualisation/analysis_warmed_up.ipynb) using the `warmed_up` data.
 
 
 ## Authors
