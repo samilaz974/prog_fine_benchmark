@@ -74,9 +74,7 @@ Here we are using python 3.7.3
 
 In the `visualisation/data` package, we have the .csv files storing the benchmark results.
 
-In the `visualisation/` package, we have 2 notebooks:
-
-[analysis.ipynb](https://github.com/samilazrak/prog_fine_benchmark/blob/master/td2/visualisation/analysis.ipynb) <br>
+In the `visualisation/` package, we have the [analysis.ipynb](https://github.com/samilazrak/prog_fine_benchmark/blob/master/td2/visualisation/analysis.ipynb) notebook that contains all graphs.
 
 ## Authors
 
